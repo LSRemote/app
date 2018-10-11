@@ -1,12 +1,13 @@
 <template>
-  <div class="page">
-    Project Settings
+  <div class="box--content" :style="'padding: ' + padding + 'px'">
+    <slot></slot>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'view-project-settings',
+    name: 'box-content',
+    props: ['padding'],
     components: {
     },
     methods: {

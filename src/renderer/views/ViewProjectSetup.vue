@@ -1,12 +1,12 @@
 <template>
   <div class="page">
-    Project Settings
+    Project Setup
   </div>
 </template>
 
 <script>
   export default {
-    name: 'view-project-settings',
+    name: 'view-project-setup',
     components: {
     },
     methods: {
@@ -15,4 +15,5 @@
 </script>
 
 <style lang="scss">
+
 </style>

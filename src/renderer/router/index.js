@@ -7,8 +7,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'view-hub',
-      component: require('@/views/ViewHub').default
+      name: 'view-project-select',
+      component: require('@/views/ViewProjectSelect').default
+    },
+    {
+      path: '/project/hub',
+      name: 'view-project-hub',
+      component: require('@/views/ViewProjectHub').default
     },
     {
       path: '/project/settings',

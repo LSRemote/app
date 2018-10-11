@@ -13,7 +13,7 @@
 </script>
 
 <style lang="scss">
-  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
+  @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600,800');
   @import url('assets/css/materialdesignicons.css');
 
   html {
@@ -24,24 +24,14 @@
   }
   body {
     margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 14px;
   }
   #app {
     width: 100vw;
     height: 100vh;
     background: #f1f1f1;
-  }
-  .page {
-    display: grid;
-    grid-template-rows: auto 1fr;
-
-    & main {
-      padding: 25px;
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      grid-gap: 25px;
-      overflow-y: auto;
-    }
+    padding: 60px;
+    overflow-y: scroll;
   }
 </style>
