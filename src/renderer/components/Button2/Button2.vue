@@ -1,5 +1,5 @@
 <template>
-  <button :class="'button-' + type">
+  <button :class="'button-' + type" :disabled="disabled">
     {{ text }}
   </button>
 </template>
@@ -9,7 +9,7 @@
 
   export default {
     name: 'button2-button2',
-    props: ['type', 'text', 'icon'],
+    props: ['type', 'text', 'icon', 'disabled'],
     components: {
       Icon
     },
@@ -26,25 +26,40 @@
     text-transform: uppercase;
     border: 0;
     text-align: center;
-    padding: 10px 25px;
+    padding: 11px 25px;
     border-radius: 100px;
     transition: 0.15s ease all;
 
     &:focus {
       outline: 0;
     }
+    &[disabled] {
+      opacity: 0.6;
+    }
   }
   button.button-primary, button.button-undefined {
     background: #50C9FF;
     color: #fff;
 
-    &:hover {
+    &:not([disabled]):hover {
       background: darken(#50C9FF, 15%);
       box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
       cursor: pointer;
     }
-    &:active {
+    &:not([disabled]):active {
       background: darken(#50C9FF, 20%);
+      box-shadow: 0px 2px 16px rgba(0,0,0,0.3);
+    }
+  }
+  button.button-light {
+    background: #4f4f4f;
+    color: #fff;
+
+    &:not([disabled]):hover {
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+    &:not([disabled]):active {
       box-shadow: 0px 2px 16px rgba(0,0,0,0.3);
     }
   }

@@ -1,5 +1,5 @@
 <template>
-  <div class="box--footer">
+  <div class="box--footer" :style="'text-align:' + alignment">
     <slot></slot>
   </div>
 </template>
@@ -7,6 +7,7 @@
 <script>
   export default {
     name: 'box-footer',
+    props: ['alignment']
   }
 </script>
 

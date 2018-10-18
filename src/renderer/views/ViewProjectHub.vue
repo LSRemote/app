@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <aside>
-      <Toolbar hasBack="true" :primaryText="projectTitle" :smallText="projectLocation" />
+      <Toolbar hasBack="true" :primaryText="project.title" :smallText="project.apiHost + ':' + project.apiPort" />
     </aside>
     <main>
       History
@@ -17,8 +17,8 @@
     name: 'view-project-hub',
     data: function() {
       return {
-        projectTitle: "",
-        projectLocation: ""
+        projects: [],
+        project: {}
       }
     },
     components: {
@@ -26,8 +26,14 @@
       Icon
     },
     mounted() {
-      this.projectTitle = this.$route.query.projectTitle;
-      this.projectLocation = this.$route.query.projectLocation;
+      if(localStorage.projects) {
+        this.projects = JSON.parse(localStorage.getItem('projects'));
+      }
+
+      this.projectIndex = this.$route.query.projectIndex;
+      this.project = this.projects[this.projectIndex];
+
+      console.log(this.project);
     },
     methods: {
     }

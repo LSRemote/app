@@ -1,13 +1,12 @@
 <template>
-  <div class="box--content" :style="'padding: 9px ' + padding + 'px'">
+  <div class="box-main">
     <slot></slot>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'box-content',
-    props: ['padding'],
+    name: 'box-main',
     components: {
     },
     methods: {
@@ -16,4 +15,8 @@
 </script>
 
 <style lang="scss">
+.box-main {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
 </style>

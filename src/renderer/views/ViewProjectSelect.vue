@@ -4,7 +4,7 @@
       <Toolbar primaryText="Select a project" />
 
       <ProjectSelect>
-        <ProjectSelectItem v-for="item in projects" :title="item.title" :location="item.location" />
+        <ProjectSelectItem v-for="(item, index) in projects" :title="item.title" :location="item.apiHost + ':' + item.apiPort" :projectIndex="index" />
         <ProjectSelectEmpty v-if="projects.length < 1" />
       </ProjectSelect>
 
@@ -37,8 +37,6 @@
       }
     },
     mounted() {
-      console.log(localStorage.projects);
-
       if(localStorage.projects) {
         this.projects = JSON.parse(localStorage.getItem('projects'));
       }
@@ -46,7 +44,6 @@
     methods: {
       debugLoadProjects: function() {
         var demoProjects = [
-          {'title': 'SplatRadio', 'location': '127.0.0.1:3000'},
           {'title': 'Despacito 24/7', 'location': 'despaci.to:8000'},
           {'title': 'Development Stream', 'location': 'localhost:1234'},
           {'title': 'ChillYourMind Radio • 24/7 Music Live Stream | Deep & Tropical House | Chill Music, Dance Music', 'location': 'chillstream.yt:4473' }

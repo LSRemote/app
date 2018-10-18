@@ -4,8 +4,8 @@
     <BoxContent>
       <slot></slot>
     </BoxContent>
-    <BoxFooter>
-      <center><Button2 text="Create new" /></center>
+    <BoxFooter alignment="center">
+      <router-link :to="{ name: 'view-project-setup' }"><Button2 text="Create new" /></router-link>
     </BoxFooter>
   </Box>
 </template>
@@ -34,7 +34,4 @@
 </script>
 
 <style lang="scss">
-  .box--foter {
-    background: orange;
-  }
 </style>

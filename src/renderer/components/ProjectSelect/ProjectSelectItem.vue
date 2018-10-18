@@ -10,13 +10,13 @@
 
   export default {
     name: 'projectselect-item',
-    props: ['title', 'location'],
+    props: ['title', 'location', 'projectIndex'],
     components: {
       Icon
     },
     methods: {
       openProject: function() {
-        this.$router.push({ path: '/project/hub', query: { projectTitle: this.title, projectLocation: this.location}});
+        this.$router.push({ path: '/project/hub', query: { projectIndex: this.projectIndex }});
       }
     }
   }

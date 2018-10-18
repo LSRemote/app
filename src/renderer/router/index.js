@@ -21,6 +21,11 @@ export default new Router({
       component: require('@/views/ViewProjectSettings').default
     },
     {
+      path: '/project/setup',
+      name: 'view-project-setup',
+      component: require('@/views/ViewProjectSetup').default
+    },
+    {
       path: '*',
       redirect: '/'
     }
