@@ -1,7 +1,7 @@
 <template>
-  <div class="projectSelect--item" v-on:click="openProject()">
+  <div class="projecthub-historylist--item">
     <div class="title">{{ title }}</div>
-    <div class="location">{{ location }}</div>
+    <div class="author">{{ author }}</div>
   </div>
 </template>
 
@@ -9,21 +9,18 @@
   import Icon from '@/components/Icon';
 
   export default {
-    name: 'projectselect-item',
-    props: ['title', 'location', 'projectIndex'],
+    name: 'projecthub-historylist--item',
+    props: ['title', 'author'],
     components: {
       Icon
     },
     methods: {
-      openProject: function() {
-        this.$router.push({ path: '/project/hub', query: { projectIndex: this.projectIndex }});
-      }
     }
   }
 </script>
 
 <style lang="scss">
-  .projectSelect--item {
+  .projecthub-historylist--item {
     padding: 15px 30px;
     transition: 0.2s ease background;
     cursor: pointer;
@@ -36,15 +33,8 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    & .location {
+    & .author {
       opacity: 0.4;
-    }
-
-    &:hover {
-      background: rgba(0,0,0,0.03);
-    }
-    &:active {
-      background: rgba(0,0,0,0.05);
     }
   }
 </style>

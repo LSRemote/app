@@ -63,4 +63,17 @@
       box-shadow: 0px 2px 16px rgba(0,0,0,0.3);
     }
   }
+  button.button-white {
+    box-shadow: 0px 2px 16px rgba(0,0,0,0.2);
+    background: #fff;
+    color: #000;
+
+    &:not([disabled]):hover {
+      box-shadow: 0px 2px 32px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+    &:not([disabled]):active {
+      box-shadow: 0px 2px 16px rgba(0,0,0,0.3);
+    }
+  }
 </style>

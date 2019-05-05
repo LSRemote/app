@@ -8,9 +8,9 @@
         <ProjectSelectEmpty v-if="projects.length < 1" />
       </ProjectSelect>
 
-      <br />
+      <!-- <br />
       <button v-on:click="debugLoadProjects()">Debug_Load_Projects</button>
-      <button v-on:click="debugResetProjects()">Debug_Reset_Projects</button>
+      <button v-on:click="debugResetProjects()">Debug_Reset_Projects</button> -->
     </main>
   </div>
 </template>
